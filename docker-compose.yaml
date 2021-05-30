@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  geoiplookup:
+    build: .
+    image: antoniodiazroman/ingram:v0.1
+    container_name: geoiplookup
+    restart: on-failure
+    volumes:
+      - ./hosts.txt:/opt/hosts.txt
